@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { increament,decreament, increamentByValue, countingReducer } from './features/counter/counterSlice';
 import Number from './Number';
+import Users from './Users';
 
 const App = () => {
   const counter = useSelector(countingReducer);
@@ -13,6 +14,7 @@ const App = () => {
       <button onClick={()=>dispatch(decreament())}>decreament</button>
       <button onClick={()=>dispatch(increamentByValue(5))}>increament by value 5</button>
       <Number />
+      <Users />
     </div>
   );
 };
